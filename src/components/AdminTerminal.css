@@ -1,0 +1,351 @@
+.admin-terminal {
+  margin-top: 20px;
+  border: 1px solid #33ff33;
+  background: #000;
+  font-family: 'Courier New', monospace;
+  color: #33ff33;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #33ff33;
+  background: rgba(51, 255, 51, 0.1);
+}
+
+.terminal-header h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9em;
+}
+
+.terminal-status {
+  display: flex;
+  align-items: center;
+}
+
+.terminal-status::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #33ff33;
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: pulse 2s infinite;
+}
+
+.terminal-content {
+  padding: 20px;
+}
+
+.debug-content {
+  padding: 10px;
+  background: rgba(51, 255, 51, 0.05);
+  border-radius: 4px;
+}
+
+details {
+  margin-bottom: 10px;
+}
+
+details summary {
+  cursor: pointer;
+  padding: 5px;
+  background: rgba(51, 255, 51, 0.1);
+  border-radius: 4px;
+}
+
+details summary:hover {
+  background: rgba(51, 255, 51, 0.2);
+}
+
+.response-content {
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 滚动条样式 */
+.response-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.response-content::-webkit-scrollbar-track {
+  background: rgba(51, 255, 51, 0.05);
+  border-radius: 4px;
+}
+
+.response-content::-webkit-scrollbar-thumb {
+  background: #33ff33;
+  border-radius: 4px;
+}
+
+/* 添加新的样式 */
+.battle-debug-info {
+  margin: 10px 0;
+}
+
+.status-info {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: rgba(51, 255, 51, 0.1);
+  border-radius: 4px;
+}
+
+.status-info .label {
+  color: #33ff33;
+  font-weight: bold;
+}
+
+.status-info .value {
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.status-initializing {
+  color: #ffff33;
+  background: rgba(255, 255, 51, 0.2);
+}
+
+.status-ready {
+  color: #33ff33;
+  background: rgba(51, 255, 51, 0.2);
+}
+
+.status-error {
+  color: #ff3333;
+  background: rgba(255, 51, 51, 0.2);
+}
+
+.battle-text {
+  white-space: pre-wrap;
+  background: #000;
+  padding: 10px;
+  border: 1px solid #33ff33;
+  margin-top: 5px;
+}
+
+.api-response-info {
+  margin: 10px 0;
+}
+
+.api-response-info .timestamp {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.debug-content details {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(51, 255, 51, 0.2);
+  padding-bottom: 10px;
+}
+
+.debug-content details:last-child {
+  border-bottom: none;
+}
+
+.debug-content summary {
+  cursor: pointer;
+  padding: 5px;
+  background: rgba(51, 255, 51, 0.05);
+  border-radius: 4px;
+}
+
+.debug-content summary:hover {
+  background: rgba(51, 255, 51, 0.1);
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-tabs button {
+  padding: 5px 10px;
+  background: #333;
+  border: 1px solid #666;
+  color: #33ff33;
+  cursor: pointer;
+}
+
+.admin-tabs button.active {
+  background: #444;
+  border-color: #33ff33;
+}
+
+.battle-history {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.battle-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.battle-entry {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #444;
+  background: #222;
+}
+
+.battle-entry-header {
+  display: flex;
+  justify-content: space-between;
+  color: #33ff33;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.battle-process {
+  white-space: pre-wrap;
+  font-size: 0.9em;
+  color: #aaa;
+  margin: 0;
+  padding: 5px;
+  background: #1a1a1a;
+}
+
+.admin-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+}
+
+.reset-button {
+  background-color: #993333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+}
+
+.reset-button:hover {
+  background-color: #cc4444;
+}
+
+.dimension-button {
+  background-color: #336699;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+}
+
+.dimension-button:hover {
+  background-color: #444;
+}
+
+/* API Key settings styles */
+.settings-panel {
+  padding: 10px;
+}
+
+.setting-item {
+  margin-bottom: 20px;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 8px;
+  color: #33ff33;
+  font-weight: bold;
+}
+
+.api-key-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.api-key-input input {
+  flex: 1;
+  padding: 8px;
+  background: #222;
+  border: 1px solid #444;
+  color: #33ff33;
+  font-family: 'Courier New', monospace;
+}
+
+.api-key-input button {
+  padding: 8px 15px;
+  background: #333;
+  border: 1px solid #33ff33;
+  color: #33ff33;
+  cursor: pointer;
+}
+
+.api-key-input button:first-of-type {
+  background: #1a3a1a;
+}
+
+.api-key-input button:last-of-type {
+  background: #3a1a1a;
+  border-color: #ff3333;
+  color: #ff3333;
+}
+
+.api-key-input button:hover {
+  background: #444;
+}
+
+.api-key-input button:first-of-type:hover {
+  background: #2a4a2a;
+}
+
+.api-key-input button:last-of-type:hover {
+  background: #4a2a2a;
+}
+
+.api-key-info {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.api-key-info a {
+  color: #33ff33;
+  text-decoration: none;
+}
+
+.api-key-info a:hover {
+  text-decoration: underline;
+} 
