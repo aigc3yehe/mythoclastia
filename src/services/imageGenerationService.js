@@ -6,7 +6,7 @@ const IMAGE_GEN_TOKEN_STORAGE = 'image_gen_token';
 export class ImageGenerationService {
   constructor(onStatusUpdate) {
     this.onStatusUpdate = onStatusUpdate;
-    this.API_URL = "http://47.80.4.197:30410/api/v1";
+    this.API_URL = "http://47.80.4.197:30409/api/v1";
     this.API_KEY = "sk-rIZ898CT2ycOOWsgLWcEUfxXHxCdaVG761bfDsyZ9cY";
     this.POLL_INTERVAL = 10000; // 10 seconds
     this.MAX_ATTEMPTS = 60; // 10 minutes timeout

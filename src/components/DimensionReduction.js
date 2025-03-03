@@ -45,10 +45,10 @@ function DimensionReduction({ onBack }) {
       formData.append('data', fileContent);
 
       // Send request
-      const response = await fetch('http://43.153.40.155:5001/certificate/generate', {
+      const response = await fetch('http://waiting/certificate/generate', {
         method: 'POST',
         headers: {
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzQwODQ4OTA3fQ.Z_NdGyl9P1D3cFDV4auNz3q8klRgarUtc6kHHSk5egc'
+          
         },
         body: formData
       });

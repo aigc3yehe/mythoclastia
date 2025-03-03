@@ -61,7 +61,7 @@ function GameContent() {
 
     try {
       const response = await fetch(
-        "http://47.80.4.197:30410/api/v1/run/worldgen?stream=false",
+        "http://47.80.4.197:30409/api/v1/run/worldgen?stream=false",
         {
           method: "POST",
           headers: {
@@ -212,7 +212,7 @@ function GameContent() {
     setIsBattleLoading(true);
     try {
       const response = await fetch(
-        "http://47.80.4.197:30410/api/v1/run/rounds?stream=false",
+        "http://47.80.4.197:30409/api/v1/run/rounds?stream=false",
         {
           method: "POST",
           headers: {

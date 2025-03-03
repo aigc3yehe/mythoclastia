@@ -671,7 +671,7 @@ export function GameProvider({ children }) {
       };
 
       console.log('[Battle API] Request:', {
-        url: "http://47.80.4.197:30410/api/v1/run/rounds?stream=false",
+        url: "http://47.80.4.197:30409/api/v1/run/rounds?stream=false",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -684,7 +684,7 @@ export function GameProvider({ children }) {
       let response;
       try {
         response = await fetch(
-          "http://47.80.4.197:30410/api/v1/run/rounds?stream=false",
+          "http://47.80.4.197:30409/api/v1/run/rounds?stream=false",
           {
             method: "POST",
             headers: {

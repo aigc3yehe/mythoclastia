@@ -759,7 +759,7 @@ ${battleInstance.levelStory || 'No story available.'}`;
 
     try {
       const response = await fetch(
-        "http://47.80.4.197:30410/api/v1/run/battle?stream=false",
+        "http://47.80.4.197:30409/api/v1/run/battle?stream=false",
         {
           method: "POST",
           headers: {

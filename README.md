@@ -1,16 +1,16 @@
-# Mythoclastia - Fantasy Game World Generator
+# Mythoclastia - Fantasy World Generator
 
-![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
-![Made with React](https://img.shields.io/badge/Made%20with-React-61DAFB.svg)
-![OpenAI API](https://img.shields.io/badge/OpenAI%20API-integrated-634BDC.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/aigc3yehe/Mythoclastia/releases)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![Made with React](https://img.shields.io/badge/Made%20with-React-61DAFB?logo=react)](https://reactjs.org/)
 
-![Game Logo](src/imgs/icon.png)
-
-Mythoclastia is an interactive fantasy game world generator that allows users to create unique fantasy worlds, team members, and engage in tactical battles. The application uses AI-powered text and image generation to create immersive gaming experiences.
+<img src="src/imgs/icon.png" alt="Game Logo" width="150px" height="auto">
 
 [English](README.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
+
+Mythoclastia is an interactive fantasy game world generator that allows users to create unique fantasy worlds, team members, and engage in tactical battles. The application uses AI-powered text and image generation to create immersive gaming experiences.
 
 ## 🌟 Features
 
@@ -33,8 +33,8 @@ Mythoclastia is an interactive fantasy game world generator that allows users to
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/mythoclastia.git
-   cd mythoclastia
+   git clone https://github.com/aigc3yehe/Mythoclastia.git
+   cd Mythoclastia
    ```
 
 2. Install dependencies:
@@ -53,6 +53,7 @@ Mythoclastia is an interactive fantasy game world generator that allows users to
 
 1. **Start Screen**: Enter a prompt to generate your fantasy world
 2. **Loading Stage**: Wait while the AI generates your world and team members
+   > **Note**: World generation can take some time. A processing time of up to 3 minutes is normal.
 3. **Main Game**: Explore your world and view your team members
 4. **Battle Mode**: Engage in tactical turn-based battles
    - Choose skills for each team member
@@ -66,11 +67,14 @@ This application requires an OpenAI API key for text generation features and opt
 ### Setting Up API Keys
 
 1. **OpenAI API Key** (Required):
+   - You need to prepare your own OpenAI API key
    - Create an account at [OpenAI](https://platform.openai.com/)
    - Generate an API key from your dashboard
    - Enter this key in the Admin Terminal's Settings tab in the game
 
 2. **Image Generation Token** (Optional):
+   - Image generation functionality is powered by [misato.ai](https://misato.ai)'s technology and computing resources
+   - Contact YeHe to obtain a token for using the image generation feature
    - If not provided, ASCII art will be displayed instead of generated images
    - Enter this token in the Admin Terminal's Settings tab
 
@@ -111,5 +115,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgements
 
 - [OpenAI](https://openai.com/) for the text generation API
+- [misato.ai](https://misato.ai) for providing image generation technology and computing power
+- Connect with [Misato Virtuals](https://twitter.com/Misato_Virtuals) on Twitter
 - [React](https://reactjs.org/) for the UI framework
 - All the amazing contributors who have helped improve this project

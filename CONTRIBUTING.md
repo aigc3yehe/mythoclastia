@@ -80,8 +80,8 @@ All JavaScript code is linted with ESLint and should adhere to the project's ESL
 ### Setting Up Development Environment
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/mythoclastia.git`
-3. Navigate to the project directory: `cd mythoclastia`
+2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/Mythoclastia.git`
+3. Navigate to the project directory: `cd Mythoclastia`
 4. Install dependencies: `npm install`
 5. Create a new branch: `git checkout -b my-branch-name`
 6. Make your changes

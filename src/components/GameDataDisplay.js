@@ -206,7 +206,6 @@ function GameDataDisplay({
   const generateAvatars = async () => {
     console.log('[Generate Avatar] Starting avatar generation');
     
-    // 分别处理每个队员的头像生成
     for (const member of ['A', 'B']) {
       const portraitData = gameData.teamMembers[member]?.portrait;
       if (!portraitData) {
@@ -235,7 +234,6 @@ function GameDataDisplay({
         }
 
         if (avatarUrl) {
-          // 立即更新单个队员的头像
           setAvatarUrls(prev => ({
             ...prev,
             [member]: avatarUrl
@@ -256,12 +254,10 @@ function GameDataDisplay({
         }
       } catch (error) {
         console.error(`[Generate Avatar] Error generating avatar for member ${member}:`, error);
-        // 继续处理下一个队员的头像
       }
     }
   };
 
-  // 初始化图片服务
   useEffect(() => {
     imageServiceRef.current = createImageService((status) => {
       console.log('[Image Service] Status:', status);
@@ -275,7 +271,6 @@ function GameDataDisplay({
     };
   }, []);
 
-  // 在 useEffect 中监听 gameData 变化
   useEffect(() => {
     const shouldGenerate = 
       shouldGenerateImage && 
@@ -300,7 +295,6 @@ function GameDataDisplay({
   }, [shouldGenerateImage, gameData?.imageGeneration?.prompt, imageUrl, isGenerating, 
       hasStartedGeneration, generateImage, onGenerationStart]);
 
-  // 同步图片URL
   useEffect(() => {
     if (gameData?.imageGeneration?.generatedImageUrl && !imageUrl) {
       console.log('[Image] Syncing URL from game data');
@@ -319,7 +313,6 @@ function GameDataDisplay({
     try {
       setIsSearchingEnemy(true);
       
-      // 清除战斗缓存数据
       updateGameData(prev => ({
         ...prev,
         battleInstance: {
@@ -329,7 +322,6 @@ function GameDataDisplay({
         }
       }));
       
-      // 清除所有敌人头像缓存
       const keys = Object.keys(localStorage);
       keys.forEach(key => {
         if (key.startsWith('enemy_avatar_')) {
@@ -358,7 +350,7 @@ function GameDataDisplay({
 
     } catch (error) {
       console.error('[Battle] Error during battle generation:', error);
-      // 设置错误状态
+
       updateGameData(prev => ({
         ...prev,
         battleInstance: {
@@ -377,7 +369,7 @@ function GameDataDisplay({
     setIsBattleMode(true);
   };
 
-  // 如果处于战斗模式，显示战斗界面
+
   if (isBattleMode) {
     console.log('[Battle] Rendering battle screen');
     return <BattleScreen onExit={() => {
@@ -386,7 +378,7 @@ function GameDataDisplay({
     }} />;
   }
 
-  // 修改按钮渲染逻辑
+
   const renderBattleButtons = () => {
     if (battleInstance.status === 'ready') {
       return (

@@ -100,7 +100,7 @@ ${battleInstance.levelStory || 'No story available.'}`;
 
     try {
       const response = await fetch(
-        "http://47.80.4.197:30410/api/v1/run/battle?stream=false",
+        "http://47.80.4.197:30409/api/v1/run/battle?stream=false",
         {
           method: "POST",
           headers: {
@@ -210,19 +210,19 @@ ${battleInstance.levelStory || 'No story available.'}`;
 
   return (
     <div className="subround-battle-panel">
-      <h3>Sub-Round 战斗</h3>
+      <h3>Sub-Round Battle</h3>
       {pairs.map(pair => (
         <div key={pair.teamId} className="subround-battle-pair" style={{ border: '1px solid #ccc', margin: '10px', padding: '10px' }}>
           <div className="team-member-info">
             <strong>{pair.member.name}</strong> (HP: {pair.member.hp}, MP: {pair.member.mp})
             <div>
-              <label>选择技能： </label>
+              <label>Select Skill: </label>
               <select
                 value={selectedSkills[pair.teamId] !== undefined ? selectedSkills[pair.teamId] : ""}
                 onChange={(e) => handleSkillChange(pair.teamId, parseInt(e.target.value))}
               >
                 <option value="" disabled>
-                  -- 请选择技能 --
+                  -- Select Skill --
                 </option>
                 {pair.member.Skills.map((skill, idx) => (
                   <option 
